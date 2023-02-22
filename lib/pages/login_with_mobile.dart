@@ -22,7 +22,6 @@ class _LoginWithMobileState extends State<LoginWithMobile> {
   String buttonName = "Send";
   int start = 30;
   bool wait = false;
-  bool verifyEnable = false;
   var countryPicker = const FlCountryCodePicker();
 
   CountryCode? countryCode;
@@ -203,12 +202,9 @@ class _LoginWithMobileState extends State<LoginWithMobile> {
             height: 10.0,
           ),
           ElevatedButton(
-            onPressed: start == 0
-                ? null
-                : () async {
+            onPressed: () async {
                     try {
                       setState(() {
-                        verifyEnable = true;
                         authClass.signInWithPhoneNumber(
                             verificationIdFinal, smsCode, context);
                       });
@@ -248,7 +244,7 @@ class _LoginWithMobileState extends State<LoginWithMobile> {
             child: Text(
               "VERIFY CODE",
               style: TextStyle(
-                  color: start == 0 ? Colors.grey : Colors.white,
+                  color:  Colors.white,
                   fontWeight: FontWeight.bold),
             ),
           ),

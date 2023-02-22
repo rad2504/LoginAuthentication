@@ -1,3 +1,4 @@
+import 'package:exinitylogin/pages/login_with_mobile.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
@@ -38,9 +39,6 @@ class AuthClass {
                     )),
             (route) => false);
 
-        // final snackBar =
-        // SnackBar(content: Text(userCredential.user?.displayName));
-        // ScaffoldMessenger.of(context).showSnackBar(snackBar);
       }
     } catch (e) {
       final snackBar = SnackBar(content: Text(e.toString()));
@@ -114,11 +112,7 @@ class AuthClass {
       Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(
-              builder: (builder) => fourth(
-                    firstName: userCredential.user?.displayName ?? '',
-                    lastName: '',
-                    email: userCredential.user?.email ?? '',
-                  )),
+              builder: (builder) =>LoginWithMobile()),
           (route) => false);
 
       showSnackBar(context, "logged In");

@@ -22,7 +22,7 @@ class fourth extends StatelessWidget {
         title: const Text("Fourth"),
       ),
       body: Container(
-        margin: const EdgeInsets.fromLTRB(100.0, 100.0, 0.0, 0.0),
+        margin: const EdgeInsets.fromLTRB(60.0, 30.0, 0.0, 0.0),
         child: Column(
           children: [
             Text(
@@ -37,7 +37,8 @@ class fourth extends StatelessWidget {
             ),
             Text("Your email is: $email"),
             const SizedBox(
-              height: 10,
+              height: 420,
+              width: 200,
             ),
             ElevatedButton(
               onPressed: () async {
