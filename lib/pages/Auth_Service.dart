@@ -95,6 +95,7 @@ class AuthClass {
           verificationFailed: verificationFailed,
           codeSent: codeSent,
           codeAutoRetrievalTimeout: codeAutoRetrievalTimeout);
+
     } catch (e) {
       showSnackBar(context, e.toString());
     }
